@@ -15,7 +15,7 @@ namespace DatabaseIntegration.CommandLine
         {
             ConnectionStringSettings cxnstring = ConfigurationManager.ConnectionStrings["sl"];
 
-            MovieDatabase md = new MovieDatabase(cxnstring.ConnectionString);
+            MovieDatabase md = new MovieDatabase(cxnstring.ConnectionString);   // new instance
 
             foreach (string s in md.MoviesByRating(5))
             {

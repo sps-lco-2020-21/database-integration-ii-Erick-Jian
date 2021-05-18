@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/stbay/Desktop/Computer Science/SQL/Movies.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas browser query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="2350"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainRatings"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Movies" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="300"/><column index="3" value="52"/><column index="4" value="162"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Ratings" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="52"/><column index="3" value="61"/><column index="4" value="91"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 5">SELECT *
+from Movies m
+LEFT outer JOIN Ratings r
+on m.id = r.mid
+WHERE rating is NULL</sql><sql name="Q2.sql">SELECT DISTINCT year  -- make a set of responses
+from Movies m
+JOIN Ratings r
+on r.mid = m.id
+WHERE r.rating &gt; 3
+order by year ASC</sql><sql name="Notes.sql">--from	Movies
+
+--WHERE director = &amp;quot;Steven Spielberg&amp;quot;
+
+--order by year DESC
+
+
+
+
+from Movies m
+
+JOIN Ratings r
+
+on m.id = r.mid	 -- where statement
+
+
+-- OUTER JOIN
+	-- Left Join
+		-- might NOT be sth on the RHS
+	  
+	-- Right JOIN
+		-- might NOT be sth on LHS
+
+-- INNER Join
+
+	-- non-null on LHS &amp;amp; RHS
+
+-- Comma Join
+
+from Movies m Ratings r
+
+JOIN ON m.id = r.mid&lt;/sql&gt;&lt;current_tab id=&quot;1&quot;/&gt;&lt;/tab_sql&gt;&lt;/sqlb_project&gt;
+</sql><current_tab id="2"/></tab_sql></sqlb_project>
